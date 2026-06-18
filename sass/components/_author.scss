@@ -1,0 +1,47 @@
+// Author
+.author {
+  &__img {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 72px;height: 72px;
+    flex-shrink: 0;
+  }
+  &__info {
+    margin-left: 11px;
+  }
+  &__box {
+    margin-top: 8px;
+  }
+  &__name {
+    line-height: 1.5;
+  }
+  &__link {
+    width: 20px;height: 20px;
+    &--share {
+      background: url(../img/svg/i-share.svg) center/contain no-repeat;
+    }
+    &--like {
+      background: url(../img/svg/i-like.svg) center/contain no-repeat;
+    }
+    &:hover {
+      opacity: .6;
+    }
+  }
+  &__like {
+    margin-left: 15px;
+    span {
+      font-size: $fz-14;
+      margin-left: 10px;
+    }
+  }
+  &_down {
+    margin-top: 32px;
+    .author__name {
+      color: $gray;
+      font-size: $fz-12;
+    }
+    .author__box {
+      margin-top: 14px;
+    }
+  }
+}

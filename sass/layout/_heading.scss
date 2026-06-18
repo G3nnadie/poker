@@ -1,0 +1,27 @@
+// Heading
+.heading {
+  padding: 0 15px 0;
+  margin-bottom: 8px;
+  &__title {
+    color: $light;
+    line-height: 1.5;
+    font-weight: $bold;
+    font-family: $font-second;
+  }
+  .more {
+    margin-left: 15px;
+  }
+  &__mob {
+    line-height: 1.5;
+    font-weight: $bold;
+    font-family: $font-second;
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .heading {
+    padding: 0 10px;
+    margin-bottom: 6px;
+  }
+}

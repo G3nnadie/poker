@@ -1,0 +1,91 @@
+// Features
+.features {
+  margin-top: -109px;
+  margin-left: -4px;
+  margin-right: -4px;
+  .col-auto {
+    padding: 0 4px;
+  }
+  &__item {
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 32px;height: 32px;
+    flex-shrink: 0;
+    &--key {
+      background: url(../img/svg/i-key-white.svg) center no-repeat $blue;
+    }
+    &--check {
+      background: url(../img/svg/i-check-white.svg) center no-repeat $green;
+    }
+    &--cross {
+      background: url(../img/svg/i-cross-white.svg) center no-repeat $red;
+    }
+  }
+  &__name {
+    color: $light;
+    margin-left: 8px;
+    font-weight: $bold;
+    font-family: $font-second;
+  }
+  &__list {
+    margin-top: 10px;
+  }
+  &__row {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+  &__payments {
+    margin-left: 8px;
+    border-radius: 50%;
+    width: 24px;height: 24px;
+    flex-shrink: 0;
+    &--bt {
+      background: url(../img/svg/i-bt.svg) center/contain no-repeat;
+    }
+    &--et {
+      background: url(../img/svg/i-et.svg) center/contain no-repeat;
+    }
+  }
+  &__check, &__cross {
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+  &__check {
+    width: 12px;height: 9px;
+    background: url(../img/svg/i-check-green.svg) center/contain no-repeat;
+  }
+  &__cross {
+    width: 12px;height: 12px;
+    background: url(../img/svg/i-cross-red.svg) center/contain no-repeat;
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .features {
+    display: none;
+  } 
+}
+
+@media (min-width: 1200px) {
+  .features {
+    .col-auto {
+      flex: 0 0 27%;
+      max-width: 27%;
+    }
+  }
+}

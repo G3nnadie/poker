@@ -1,0 +1,258 @@
+// Cover
+.cover {
+  color: $white;
+  position: relative;
+  &__item {
+    width: 100%;
+  }
+  &__img {
+    position: absolute;
+  }
+  &__big {
+    max-width: 676px;
+    .cover__box {
+      max-width: 286px;
+      margin-left: 15px;
+    }
+    .cover__img {
+      width: 60%;
+      top: 0;left: 0;bottom: 0;
+    }
+  }
+  &__double {
+    max-width: 388px;
+    padding-left: 40px;
+  }
+  &__item {
+    &--small {
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      .cover__img {
+        right: 0;
+        width: 40%;
+        height: 50%;
+      }
+    }
+    &--top .cover__img {
+      top: 0;
+    }
+    &--bot {
+      .cover__img {
+        bottom: 0;
+      }
+      .cover__box {
+        max-width: 260px;
+      }
+    }
+  }
+  &__box {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+  }
+  &__title {
+    line-height: 1.5;
+    font-size: $fz-20;
+    font-weight: $bold;
+    font-family: $font-second;
+    text-transform: uppercase;
+  }
+  &__turquoise {
+    color: $turquoise;
+  }
+  &__txt {
+    font-size: $fz-24;
+    line-height: 1.2;
+    margin-top: 8px;
+  }
+  &__more {
+    font-size: $fz-12;
+    margin-top: 30px;
+    a {
+      color: $white;
+    }
+    .more__icon {
+      margin-left: 4px;
+    }
+  }
+}
+
+// Media
+@media (max-width: 1400px) {
+  .cover__double {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: $xl) {
+  .cover {
+    &__big {
+      max-width: 524px;
+      .cover__img {
+        width: 55%;
+      }
+    }
+    &__double {
+      max-width: 406px;
+      padding-left: 30px;
+    }
+    &__item--small {
+      min-height: 270px;
+      .cover__img {
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .cover {
+    &__big {
+      max-width: 380px;
+      .cover__box {
+        max-width: 205px;
+      }
+    }
+    &__double {
+      max-width: 310px;
+    }
+    &__item--small {
+      min-height: 220px;
+    }
+    &__title {
+      font-size: $fz-16;
+    }
+    &__txt {
+      font-size: $fz-18;
+    }
+    .cover__item--bot .cover__box {
+      max-width: 210px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .cover__big {
+    max-width: 290px;
+  }
+  .cover__double {
+    padding-left: 20px;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: $sm) {
+  .cover {
+    .container {
+      padding: 0;
+    }
+    .swiper-slide {
+      max-width: 100%;
+    }
+    &__item {
+      min-height: 485px;
+      padding: 40px 24px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      &:after {
+        @include pseudo-elements;
+        left: 0;bottom: 0;right: 0;
+        height: 345px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, rgba(0, 133, 255, .2) 25%, #000000 100%);
+      }
+    }
+    &__double {
+      padding-left: 0;
+      .cover__item--bot {
+        display: none;
+      }
+    }
+    &__img {
+      width: 100% !important;
+      height: 100% !important;
+    }
+    &__big .cover__img {
+      background-position: 70% center !important;
+    }
+    .cover__item--bot .cover__img {
+      background-position: 85% center !important;
+    }
+    .cover__box {
+      margin: 0;
+      max-width: 100%;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__txt {
+      font-size: 24px;
+    }
+    &__more {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $extra-mob) {
+  .cover__item {
+    padding: 40px 15px;
+  }
+}
+
+@media (min-width: 576px) {
+  .cover {
+    &__sl,
+    .swiper-wrapper,
+    .swiper-slide {
+      position: static;
+    }
+    .swiper-wrapper {
+      transform: none;
+      align-items: center;
+    }
+    .swiper-pagination {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1650px) {
+  .cover {
+    &__big .cover__img {
+      width: 58%;
+    }
+    &__item {
+      &--small .cover__img {
+        width: 42%;
+      }
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .cover {
+    &__big .cover__img {
+      width: 55%;
+    }
+    &__item {
+      &--small .cover__img {
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media (min-width: 3300px) {
+  .cover {
+    &__big .cover__img {
+      width: 52%;
+    }
+    &__item {
+      &--small .cover__img {
+        width: 48%;
+      }
+    }
+  }
+}

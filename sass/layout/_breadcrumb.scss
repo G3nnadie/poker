@@ -1,0 +1,29 @@
+// Breadcrumb
+.breadcrumb {
+  padding: 0 15px;
+  &__item+&__item {
+    padding-left: 5px;
+  }
+  &__item+&__item:before {
+    content: "/";
+    color: $white;
+    padding-right: 2px;
+    display: inline-block;
+  }
+  &__item, &__item a {
+    color: $white;
+    font-size: $fz-12;
+    font-weight: $bold;
+  }
+  &__item a:hover {
+    text-decoration: underline;
+  }
+  &_dark {
+    .breadcrumb__item, .breadcrumb__item a {
+      color: $gray;
+    }
+    .breadcrumb__item:before {
+      color: $gray;
+    }
+  }
+}

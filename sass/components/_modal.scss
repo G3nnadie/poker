@@ -1,0 +1,194 @@
+// Modal
+.modal {
+  z-index: 99;
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+  top: 0;left: 0;right: 0;bottom: 0;
+  background: rgba(51, 51, 51, .85);
+  &__box {
+    margin: 0 auto;
+    background: $white;
+    border-radius: 8px;
+    position: relative;
+    padding: 48px 20px 56px;
+    max-width: 472px;width: 96%;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+  }
+  &__close {
+    position: absolute;
+    top: -20px;right: 0;
+    width: 15px;height: 15px;
+    background: url(../img/svg/i-cross-white.svg) center/contain no-repeat;
+    &--dark {
+      background: url(../img/svg/i-cross-dark.svg) center/contain no-repeat;
+    }
+    &:hover {
+      opacity: .6;
+    }
+  }
+  &__logo img {
+    width: 152px;
+    display: block;
+    margin: 0 auto 29px;
+  }
+  &__title {
+    color: $light;
+    line-height: 1.1;
+    font-size: $fz-32;
+    font-weight: bold;
+    font-family: $font-second;
+  }
+  &__body {
+    padding: 0 60px;
+    margin-top: 16px;
+    &--height {
+      min-height: 220px;
+      margin-top: 0 !important;
+    }
+  }
+  &__txt {
+    color: $gray;
+    font-size: $fz-12;
+  }
+  &__two {
+    display: none;
+    .modal__body {
+      padding: 0;
+    }
+  }
+  &__paragraph {
+    line-height: 1.5;
+  }
+  &_signUp {
+    .modal__body {
+      margin-top: 30px;
+    }
+    .check {
+      padding: 0 15px;
+    }
+    .check__txt {
+      margin-left: 4px;
+      font-size: $fz-10;
+    }
+  }
+  &_pass {
+    .modal__one {
+      .modal__body {
+        margin-top: 68px;
+      }
+      .form__btn {
+        margin-top: 60px;
+      }
+    }
+  }
+  &_subscribe {
+    .modal__body {
+      margin-top: 30px;
+    }
+    .btn {
+      line-height: 40px;
+      max-width: 180px;
+    }
+  }
+  &_payment {
+    .modal__box {
+      max-width: 736px;
+    }
+  }
+  &_users {
+    .modal__box {
+      max-width: 1064px;
+    }
+  }
+  &_submitted {
+    .modal__box {
+      max-width: 400px;
+      padding: 55px 40px 45px;
+    }
+    .modal__close {
+      top: 25px;right: 25px;
+    }
+    .modal__title {
+      margin-bottom: 15px;
+    }
+    .btn-add_modal {
+      margin-top: 24px;
+    }
+  }
+  &_account {
+    .modal__box {
+      max-width: 740px;
+      .form__item {
+        margin-top: 25px;
+      }
+      .btn {
+        margin-top: 30px;
+      }
+    }
+  }
+  &_withdrawal {
+    .overview__item {
+      padding: 0;
+      border: 0 !important;
+    }
+    .form {
+      margin-top: 40px;
+      &__item:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      &__pass {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .btn-add {
+      margin-top: 35px;
+      .btn_disable i {
+        filter: contrast(0.5);
+        transition: inherit;
+      }
+    }
+  }
+  &_sent {
+    .modal__box {
+      max-width: 400px;
+    }
+    .btn-add {
+      margin-top: 40px;
+    }
+  }
+}
+
+.fullScreen {
+  min-height: 100%;
+  padding: 100px 0 40px;
+}
+
+// Media
+@media (max-width: $sm) {
+  .modal {
+    &__box {
+      padding: 35px 20px 30px;
+    }
+    &__body {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .modal {
+    &_submitted {
+      .modal__box {
+        padding: 55px 15px 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: $extra-mob) {
+  .modal__box {
+    padding: 35px 10px 30px;
+  }
+}

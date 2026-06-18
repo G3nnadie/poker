@@ -1,0 +1,174 @@
+// Payment
+.payment {
+  &-nav {
+    margin-top: 20px;
+    margin-left: -4px;margin-right: -4px;
+    [class*='col-'] {
+      padding: 0 4px;
+    }
+    &__item {
+      width: calc(33.3333333333% - 8px);
+    }
+    .check__item {
+      cursor: pointer;
+      line-height: 38px;
+      border-radius: 4px;
+      margin: 0 8px 8px 0;
+      padding: 0 10px 0 8px;
+      border: 1px solid #E0E0E0;
+    }
+    .check__txt {
+      color: $dark;
+      font-size: $fz-14;
+      flex: auto;
+    }
+    &__icon {
+      margin-left: 15px;
+      width: 39px;height: 22px;
+      flex-shrink: 0;
+      &--skrill {
+        background: url(../img/payment/i-skrill.svg) center/contain no-repeat;
+      }
+      &--neteller {
+        background: url(../img/payment/i-neteller.svg) center/contain no-repeat;
+      }
+      &--bitcoin {
+        background: url(../img/payment/i-bitcoin.svg) center/contain no-repeat;
+      }
+      &--ethereum {
+        background: url(../img/payment/i-ethereum.svg) center/contain no-repeat;
+      }
+      &--tether {
+        background: url(../img/payment/i-tether.svg) center/contain no-repeat;
+      }
+    }
+  }
+  &-tabs {
+    margin-top: 30px;
+    .form__item {
+      margin-bottom: 25px;
+    }
+    &__box {
+      .form__item {
+        max-width: calc(50% - 12px);width: 100%;
+      }
+    }
+    .form__item--currency {
+      .check {
+        line-height: 40px;
+        &__txt {
+          color: $light;
+          font-size: $fz-16;
+        }
+        &__item:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  .spreadsheet {
+    &__list {
+      max-width: 800px;
+      > li {
+        padding-left: 32px;
+        padding-right: 32px;
+        .cell-1 {
+          width: 20%;
+        }
+        .cell-2 {
+          width: 35%;
+        }
+        .cell-3 {
+          width: 20%;
+        }
+        .cell-4 {
+          width: 12%;
+        }
+      }
+    }
+    &__item {
+      font-size: $fz-12;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  &__icon {
+    display: block;
+    width: 74px;height: 20px;
+    flex-shrink: 0;
+    &--tether {
+      background: url(../img/payment/i-tether-big.svg) center/contain no-repeat;
+    }
+    &--neteller {
+      background: url(../img/payment/i-neteller-big.svg) center/contain no-repeat;
+    }
+    &--bitcoin {
+      background: url(../img/payment/i-bitcoin-big.svg) center/contain no-repeat;
+    }
+    &--skrill {
+      background: url(../img/payment/i-skrill-big.svg) center/contain no-repeat;
+    }
+    &--ethereum {
+      background: url(../img/payment/i-ethereum-big.svg) center/contain no-repeat;
+    }
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .payment {
+    .spreadsheet {
+      &__list {
+        >li {
+          padding-left: 15px;
+          padding-right: 15px;
+          .cell-1 {
+            width: 18%;
+          }
+          .cell-3 {
+            width: 16%;
+          }
+          .cell-4 {
+            width: 15%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .payment {
+    &-nav__item {
+      width: calc(50% - 8px);
+    }
+    &-tabs {
+      .form__item {
+        margin-bottom: 15px;
+      }
+      &__box .form__item {
+        max-width: 100%;
+      }
+    }
+    .spreadsheet {
+      &__list {
+        >li {
+          .cell-4 {
+            margin-bottom: 0 !important;
+          }
+        }
+      }
+    }
+    &__icon {
+      background-position: 0 center;
+    }
+  }
+}
+
+@media (max-width: $mob) {
+  .payment {
+    &-nav__item {
+      width: 100%;
+    }
+  }
+}

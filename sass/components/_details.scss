@@ -1,0 +1,122 @@
+// Details
+.details {
+  &__box {
+    color: $white;
+    padding: 64px 0;
+    background: $black-light;
+    position: relative;
+    &:after {
+      width: 45%;
+      @include pseudo-elements;
+      top: 0;right: 0;bottom: 0;
+      background: url(../img/other/details.png) center 0/cover no-repeat;
+    }
+    .title {
+      margin: 16px 0 0;
+    }
+    .title__h2 {
+      font-size: $fz-32;
+      line-height: 1.5;
+    }
+    .review__btns {
+      margin-top: 20px;
+    }
+    .timing {
+      margin-left: 10px;
+      &__icon--clock {
+        background: url(../img/svg/i-clock-white.svg) center/contain no-repeat;
+      }
+    }
+  }
+  &__content {
+    width: 48%;
+  }
+  .unit__box {
+    margin-top: -24px;
+    padding: 40px 0 24px;
+    &:after {
+      top: 0;
+    }
+  }
+  .heading {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  &__wrap {
+    .heading {
+      margin-bottom: 12px;
+    }
+  }
+  &__list {
+    line-height: 1.5;
+    li {
+      display: flex;
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__left {
+    padding-right: 20px;
+    max-width: 172px;width: 100%;
+  }
+  &__table {
+    .table__head {
+      font-size: 16px;
+    }
+    .table__row {
+      font-size: 14px;
+    }
+    .table__col {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .details__content {
+    width: 52%;
+  }
+}
+
+@media (max-width: $lg) {
+  .details {
+    &__box {
+      background: $dark;
+      &:after {
+        display: none;
+      }
+    }
+    &__content {
+      width: 100%;
+    }
+    .unit__box {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .details {
+    &__box {
+      padding-top: 32px;
+    }
+    &__left {
+      max-width: 110px;
+    }
+  }
+}
+
+@media (max-width: $extra-mob) {
+  .details {
+    &__list {
+      font-size: $fz-14;
+    }
+    &__left {
+      max-width: 97px;
+    }
+  }
+}

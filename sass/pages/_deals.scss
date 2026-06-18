@@ -1,0 +1,40 @@
+// Deals
+.deals {
+  .spreadsheet {
+    max-width: 800px;
+    .cell-1 {
+      width: 41%;
+    }
+    .cell-2 {
+      width: 41%;
+    }
+    .cell-3 {
+      width: 10%;
+    }
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .deals {
+    .spreadsheet {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .deals {
+    .spreadsheet {
+      .cell-1 {
+        padding-right: 20px;
+      }
+      .cell-3 {
+        margin-bottom: 0 !important;
+      }
+    }
+    .control-cell {
+      top: 16px;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+// Aside
+.aside {
+  min-height: 100%;
+  background: $dark;
+  padding: 65px 40px;
+  max-width: 240px;width: 100%;
+  max-width: 16.7%;
+  &__close {
+    position: absolute;
+    top: 15px;right: 15px;
+    width: 15px;height: 15px;
+    background: url(../img/svg/i-cross-white.svg) center/contain no-repeat;
+    &:hover {
+      opacity: .6;
+    }
+  }
+  &__item {
+    font-size: $fz-14;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  &__link {
+    color: $gray;
+    font-weight: $bold;
+    display: flex;
+    align-items: center;
+    svg {
+      width: 22px;
+      fill: $gray;
+      margin-right: 9px;
+      transition: all .2s;
+      flex-shrink: 0;
+    }
+    &--active, &:hover {
+      color: $white;
+      svg {
+        fill: $blue;
+      }
+    }
+  }
+  &__sublist {
+    display: none;
+    margin-left: 31px;
+  }
+  &__subitem {
+    margin-top: 16px;
+  }
+  &__sublink {
+    color: $gray;
+    font-weight: $semibold;
+    &--active, &:hover {
+      color: $turquoise;
+    }
+  }
+  &__link--active + .aside__sublist {
+    display: block;
+  }
+}
+
+// Media
+@media (max-width: $xxl) {
+  .aside {
+    max-width: 18%;
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: $lg) {
+  .aside {
+    z-index: 105;
+    position: fixed;
+    max-width: 280px;
+    padding: 50px 15px;
+    top: 0;bottom: 0;left: -100%;
+    transition: ease-in-out .2s;
+    &_open {
+      left: 0;
+    }
+  }
+}

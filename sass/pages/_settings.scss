@@ -1,0 +1,10 @@
+// Settings
+.settings {
+  .check {
+    margin-top: 20px;
+    &__txt {
+      font-size: $fz-16;
+      margin-left: 8px;
+    }
+  }
+}

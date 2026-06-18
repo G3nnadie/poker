@@ -1,0 +1,86 @@
+// Btn
+.btn {
+  color: $blue;
+  padding: 0 15px;
+  font-size: $fz-12;
+  line-height: 28px;
+  text-align: center;
+  font-weight: $bold;
+  border-radius: 50px;
+  display: inline-block;
+  border: 2px solid $blue;
+  max-width: 96px;width: 100%;
+  font-family: $font-primary;
+  &:hover {
+    color: $white;
+    background: $blue;
+  }
+  &_blue {
+    color: $white;
+    background: $blue;
+    &:hover {
+      background: $blue-dark;
+      border-color: $blue-dark;
+    }
+  }
+  &_whiteBorder {
+    color: $white;
+    border-color: $white;
+    &:hover {
+      color: $black;
+      background: $white;
+    }
+  }
+  &_no {
+    background: $gray !important;
+    border-color: $gray !important;
+  }
+  &_disable {
+    color: $gray-light !important;
+    background: $gray-extra !important;
+    border-color: $gray-extra !important;
+  }
+  &-add {
+    margin: 24px 0 40px;
+    &_modal {
+      margin: 15px 0 0;
+      .btn {
+        margin: 0 auto;
+      }
+    }
+  }
+  &_add {
+    font-size: $fz-14;
+    line-height: 36px;
+    max-width: 140px;width: 100%;
+    display: flex;
+  }
+}
+
+.i-add {
+  margin-right: 8px;
+  width: 16px;height: 12px;
+  background: url(../img/svg/i-add.svg) center/contain no-repeat;
+  flex-shrink: 0;
+}
+
+.i-plus {
+  margin-right: 8px;
+  width: 16px;height: 16px;
+  background: url(../img/svg/i-plus.svg) center/contain no-repeat;
+  flex-shrink: 0;
+  &_blue {
+    background: url(../img/svg/i-plus-blue.svg) center/contain no-repeat;
+  }
+}
+
+.withdraw {
+  margin-top: 30px;
+}
+
+.i-withdraw {
+  margin-right: 8px;
+  width: 16px;height: 12px;
+  background: url(../img/svg/i-withdraw.svg) center/contain no-repeat;
+  flex-shrink: 0;
+}

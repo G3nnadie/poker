@@ -1,0 +1,113 @@
+// Video
+.video {
+  padding-top: 48px;
+  &__item {
+    margin-bottom: 24px;
+    &--big {
+      .video__box {
+        height: 395px;
+        border-radius: 4px;
+      }
+      .video__text {
+        padding: 11px 16px 0;
+      }
+      .timing__item {
+        margin: 2px 0 0 15px;
+      }
+    }
+  }
+  &__box {
+    height: 192px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+    iframe {
+      z-index: 1;
+      display: block;
+      position: relative;
+      width: 100%;height: 100%;
+    }
+    &:after {
+      @include pseudo-elements;
+      margin: auto;
+      width: 60px;height: 60px;
+      top: 0;left: 0;right: 0;bottom: 0;
+      background: url(../img/svg/i-play.svg) center no-repeat;
+      transition: all .2s;
+    }
+    &:hover:after {
+      transform: scale(1.07);
+    }
+  }
+  &__text {
+    padding: 8px 8px 0;
+  }
+  &__name {
+    overflow: hidden;
+    line-height: 1.5;
+    max-height: 48px;
+    font-size: $fz-16;
+    font-weight: $bold;
+    font-family: $font-second;
+  }
+  &__info, &__txt {
+    margin-top: 8px;
+  }
+  &__txt {
+    line-height: 1.5;
+  }
+  &__shadow .video__box:before {
+    opacity: 0.8;
+    height: 82px;
+    @include pseudo-elements;
+    left: 0;right: 0;bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 133, 255, 0) 0%, #000000 100%);
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .video {
+    &__box {
+      height: 250px;
+    }
+    &__item--big .video__box {
+      height: 490px;
+    } 
+  }
+}
+
+@media (max-width: $lg) {
+  .video {
+    padding-top: 32px;
+    &__box {
+      height: 192px;
+    }
+    &__item--big .video__box {
+      height: 395px;
+    }
+    &__shadow .video__box:before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .video__box {
+    height: 275px;
+  }
+}
+
+@media (max-width: $mob) {
+  .video__box {
+    height: 195px;
+  }
+}
+
+@media (max-width: $extra-mob) {
+  .video__info {
+    font-size: $fz-12;
+  }
+}

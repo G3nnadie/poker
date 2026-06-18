@@ -1,0 +1,118 @@
+// Promotions
+.promotions {
+  padding: 48px 0;
+  margin-top: 24px;
+  border-radius: 16px;
+  background: $blue-light;
+  &__item {
+    overflow: hidden;
+    min-height: 360px;
+    border-radius: 8px;
+    position: relative;
+    padding: 16px 16px 11px;
+    display: flex;
+    align-items: flex-end;
+    &:after {
+      height: 345px;
+      @include pseudo-elements;
+      left: 0;bottom: 0;right: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0) 20%, rgba(0,133,255,0.3) 40%, rgba(0,0,0,0.9) 100%);
+    }
+    .action__link {
+      margin-top: 6px;
+      font-family: $font-primary;
+      a {
+        color: $white;
+      }
+    }
+  }
+  &__logo {
+    padding: 3px;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 50%;
+    top: 16px;left: 16px;
+    width: 40px;height: 40px;
+  }
+  &__info {
+    z-index: 1;
+    width: 100%;
+    color: $white;
+    text-align: center;
+    position: relative;
+    font-weight: $bold;
+    font-family: $font-second;
+  }
+  &__name {
+    line-height: 1;
+  }
+  &__price {
+    margin-top: 8px;
+    line-height: 1.2;
+    font-size: $fz-32;
+  }
+  &__type {
+    margin-top: 4px;
+    color: $turquoise;
+  }
+  &__action {
+    margin-top: 16px;
+    .btn {
+      max-width: 120px;
+    }
+  }
+  &__more {
+    margin-top: 76px;
+    .row [class*='col-'] {
+      margin-bottom: 8px;
+    }
+    .free__item {
+      height: 100%;
+    }
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .promotions__sl .swiper-slide {
+    flex: 0 0 254px;
+    max-width: 254px;
+  }
+}
+
+@media (max-width: $lg) {
+  .promotions {
+    padding: 32px 0 24px;
+    &__more {
+      margin-top: 28px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .promotions {
+    &__more .row .col-md-6:nth-child(n+4) {
+      display: none;
+    }
+    &__more_load {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .promotions {
+    &__sl {
+      margin-left: -15px;margin-right: -15px;
+      .swiper-slide {
+        padding: 0 8px;
+        &:first-child {
+          padding-left: 15px;
+        }
+        &:last-child {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}

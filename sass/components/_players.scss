@@ -1,0 +1,41 @@
+// Players
+.players {
+  margin-top: 15px;
+  border-radius: 4px;
+  background: $white;
+  padding: 25px 32px 35px;
+  height: calc(100% - 128px);
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+  &__item {
+    padding: 16px 0;
+    font-size: $fz-14;
+    counter-increment: players;
+    border-bottom: 1px solid $white-dark;
+    display: flex;
+    align-items: center;
+    .free__img {
+      margin-left: 8px;
+      width: 32px;height: 32px;
+    }
+  }
+  &__number {
+    &:before {
+      display: block;
+      content: counter(players);
+    }
+  }
+  &__name {
+    margin-left: 16px;
+    flex: auto;
+  }
+  &__sum {
+    margin-left: 10px;
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .players {
+    padding: 20px 15px;
+  }
+}

@@ -1,0 +1,21 @@
+// State
+.state {
+  padding: 0 5px;
+  color: $white;
+  text-align: center;
+  font-size: $fz-10;
+  line-height: 20px;
+  font-weight: $bold;
+  border-radius: 20px;
+  display: inline-block;
+  max-width: 60px;width: 100%;
+  &--orange {
+    background: $orange;
+  }
+  &--green {
+   background: $green;
+  }
+  &--red {
+    background: $red;
+  }
+}

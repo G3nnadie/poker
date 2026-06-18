@@ -1,0 +1,16 @@
+// Slider
+.slider {
+  z-index: 1;
+  .swiper-pagination {
+    width: auto;
+    left: auto;bottom: 20px;right: 24px;
+    &-bullet {
+      opacity: 1;
+      margin: 0 2px !important;
+      background: $gray-light;
+      &-active {
+        background: $turquoise;
+      }
+    }
+  }
+}

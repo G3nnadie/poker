@@ -1,0 +1,29 @@
+.more {
+  font-size: $fz-14;
+  font-weight: $bold;
+  a {
+    color: $light;
+  }
+  &__icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    border-radius: 50%;
+    background: url(../img/svg/i-arrow-right.svg) center no-repeat $blue;
+    transition: inherit;
+    flex-shrink: 0;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a:hover &__icon {
+    transform: translateX(3px);
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .more_load .more__icon {
+    display: none;
+  }
+}

@@ -1,0 +1,274 @@
+// Referrals
+.referrals {
+  &__link {
+    padding: 32px 0 20px;
+    .form__item {
+      max-width: 312px;width: 100%;
+    }
+  }
+  &__address, &__copy {
+    margin: 13px 0 0 24px;
+  }
+  &__address {
+    color: $blue;
+    display: block;
+    padding: 0 10px;
+    line-height: 80px;
+    border-radius: 4px;
+    max-width: 330px;width: 100%;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+  }
+  &__copy {
+    color: $light;
+    &:hover {
+      opacity: .6;
+    }
+  }
+  &-form {
+    &__row {
+      margin-bottom: 32px;
+    }
+    .form__item {
+      margin-top: 25px;
+    }
+  }
+  .spreadsheet {
+    .cell-1 {
+      width: 23%;
+    }
+    .cell-2 {
+      width: 13%;
+    }
+    .cell-3 {
+      width: 27%;
+    }
+    .cell-4 {
+      width: 13%;
+    }
+    .cell-5 {
+      width: 16%;
+    }
+    &__max {
+      .table {
+        &__col {
+          &--1 {
+            flex: 0 0 5%;
+            max-width: 5%;
+          }
+          &--2 {
+            flex: 0 0 10%;
+            max-width: 10%;
+          }
+          &--3 {
+            flex: 0 0 19%;
+            max-width: 19%;
+          }
+          &--4 {
+            flex: 0 0 15%;
+            max-width: 15%;
+          }
+          &--5, &--6 {
+            flex: 0 0 12%;
+            max-width: 12%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Modal
+.modal_users {
+  .btn-add {
+    margin-top: 50px;
+  }
+}
+
+// Copy icon
+.i-copy {
+  margin-left: 9px;
+  width: 14px;height: 14px;
+  background: url(../img/svg/i-copy.svg) center/contain no-repeat;
+  flex-shrink: 0;
+}
+
+// Add another button
+.add-another {
+  margin-top: 16px;
+  &__btn {
+    color: $light;
+    font-size: $fz-14;
+    font-weight: $bold;
+    margin-left: auto;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .i-plus {
+    margin: 0 0 0 8px;
+  }
+  &_multi {
+    margin-top: 30px;
+    .add-another__btn {
+      margin-left: 0;
+      font-size: $fz-16;
+      font-weight: $regular;
+    }
+  }
+}
+
+// Media
+@media (max-width: $xxl) {
+  .referrals {
+    .spreadsheet {
+      .cell-3 {
+        width: 12%;
+      }
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .referrals {
+    .spreadsheet {
+      &__max {
+        .table {
+          &__col {
+            &--1 {
+              flex: 0 0 7%;
+              max-width: 7%;
+            }
+            &--2 {
+              flex: 0 0 14%;
+              max-width: 14%;
+            }
+            &--3 {
+              flex: 0 0 22%;
+              max-width: 22%;
+            }
+            &--4 {
+              flex: 0 0 18%;
+              max-width: 18%;
+            }
+            &--5, &--6 {
+              flex: 0 0 15%;
+              max-width: 15%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .referrals {
+    &__link {
+      padding-bottom: 30px;
+      .form__item {
+        max-width: 100%;
+      }
+    }
+    &__address, &__copy {
+      margin-left: 0;
+    }
+    &__address {
+      max-width: 100%;
+    }
+    &__copy {
+      margin: 30px auto 0;
+    }
+    .spreadsheet {
+      &__head {
+        display: none;
+      }
+      [class*='cell-'] {
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        &:not(:last-child, .disclose-cell, .control-cell) {
+          margin-bottom: 13px;
+        }
+      }
+      .cell-1 {
+        padding-right: 50px;
+      }
+      .disclose-cell, .control-cell {
+        position: absolute;
+      }
+      .disclose-cell {
+        top: 12px;right: 45px;
+        width: 22px !important;
+      }
+      .control-cell {
+        margin-left: 0;
+        top: 16px;right: 20px;
+        width: 4px !important;
+      }
+      .free__img {
+        display: none;
+      }
+      &__room {
+        width: calc(100% - 120px);
+      }
+      &__appellative {
+        width: 100%;
+        margin-left: 0;
+      }
+      &__name {
+        max-width: 120px;
+      }
+      &__max {
+        .table {
+          &__box {
+            width: 750px;
+          }
+          &__col {
+            &--1 {
+              flex: 0 0 5%;
+              max-width: 5%;
+            }
+            &--2 {
+              flex: 0 0 10%;
+              max-width: 10%;
+            }
+            &--3 {
+              flex: 0 0 23%;
+              max-width: 23%;
+            }
+            &--4 {
+              flex: 0 0 15%;
+              max-width: 15%;
+            }
+            &--6 {
+              flex: 0 0 10%;
+              max-width: 10%;
+            }
+          }
+        }
+      }
+    }
+    .control__modal {
+      margin-top: 8px;
+      top: 100%;right: 0;
+    }
+  }
+  .modal_users__border:not(:last-child) {
+    padding-bottom: 25px;
+    border-bottom: 1px solid $gray-extra-light;
+  }
+}
+
+@media (max-width: $sm) {
+  .referrals {
+    .spreadsheet {
+      .disclose-cell {
+        right: 35px;
+        width: 20px !important;
+      }
+      .control-cell {
+        right: 10px;
+      }
+    }
+  }
+}

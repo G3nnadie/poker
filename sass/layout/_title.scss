@@ -1,0 +1,27 @@
+// Title
+.title {
+  padding: 0 15px;
+  margin-bottom: 28px;
+  &__h2 {
+    font-size: $fz-40;
+    line-height: 1.1;
+    font-weight: $bold;
+    font-family: $font-second;
+  }
+  &__sub {
+    width: 100%;
+    line-height: 1.5;
+    margin: 28px auto 0;
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .title {
+    padding: 0 10px;
+    margin-bottom: 15px;
+    &__h2 {
+      font-size: 32px;
+    }
+  }
+}

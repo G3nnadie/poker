@@ -1,0 +1,234 @@
+// Spreadsheet
+.spreadsheet {
+  &__list {
+    width: 100%;
+    font-size: $fz-14;
+    > li {
+      padding-left: 24px;
+      padding-right: 24px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+      .cell-1 {
+        position: relative;
+      }
+    }
+  }
+  &__max {
+    width: 100%;
+    display: none;
+    margin-top: 16px;
+    .table {
+      max-height: 543px;
+      @include scrollbars(6px, $gray);
+      li {
+        font-size: $fz-12;
+        min-height: 34px;
+        box-shadow: inset 0px -1px 0px $white-light;
+        &:nth-child(2n) {
+          background: $white;
+        }
+      }
+      .table__row {
+        font-weight: $regular;
+        background: $white-dark;
+      }
+    }
+    .table__head {
+      background: $blue-light
+    }
+  }
+  &_expand {
+    .spreadsheet__item {
+      flex-wrap: wrap;
+    }
+  }
+  &__head {
+    font-size: $fz-12;
+    font-weight: $extra-bold;
+  }
+  &__item {
+    border-radius: 4px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+    &--open {
+      .spreadsheet__max {
+        display: block;
+      }
+      .spreadsheet__disclose {
+        transform: rotate(90deg);
+        svg {
+          fill: $blue;
+        }
+      }
+    }
+  }
+  &__name {
+    font-weight: $extra-bold;
+    max-width: 90px;width: 100%;
+    flex-shrink: 0;
+  }
+  &__disclose {
+    display: block;
+    border-radius: 50%;
+    width: 22px;height: 22px;
+    svg {
+      fill: $dark;
+      display: block;
+      width: 100%;height: 100%;
+      transition: inherit;
+    }
+    &:hover svg {
+      fill: $blue;
+    }
+  }
+  &__appellative {
+    margin-left: 24px;
+  }
+}
+
+.btn__down {
+  margin-right: 8px;
+  width: 0;height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid $dark;
+}
+
+.disclose-cell {
+  width: 22px;
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+.control {
+  &-cell {
+    width: 4px;
+    flex-shrink: 0;
+  }
+  position: relative;
+  &__btn {
+    width: 4px;
+    display: block;
+    &:hover span {
+      background: $blue;
+    }
+  }
+  &__dots {
+    display: block;
+    border-radius: 50%;
+    width: 100%;height: 4px;
+    background: $gray;
+    transition: inherit;
+    +span {
+      margin-top: 2px;
+    }
+  }
+  &__modal {
+    z-index: 1;
+    width: 232px;
+    display: none;
+    padding: 15px 0;
+    margin-top: 8px;
+    top: 100%;right: 0;
+    position: absolute;
+    background: $white;
+    border-radius: 3px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+  }
+  &__link {
+    color: $dark;
+    display: block;
+    font-size: $fz-14;
+    padding: 0 24px;
+    line-height: 32px;
+    font-weight: $semibold;
+    &:hover {
+      color: $blue;
+      background: $blue-light;
+    }
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .spreadsheet {
+    &__list {
+      max-width: 100%;
+    }
+    .table li {
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .spreadsheet {
+    &__list {
+      > li {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+  .control__modal {
+    margin-top: 0;
+    top: -30px;right: 15px;
+  }
+}
+
+@media (max-width: $sm) {
+  .spreadsheet {
+    &__list {
+      >li {
+        display: block;
+        padding: 15px 10px !important;
+        [class*='cell-'] {
+          display: flex;
+          align-items: center;
+          &:not(:last-child, .control-cell, .disclose-cell) {
+            margin-bottom: 13px;
+            width: 100% !important;
+          }
+        }
+      }
+      >li.spreadsheet__head {
+        display: none;
+      }
+    }
+    .free__img {
+      display: none;
+    }
+    &__room {
+      width: calc(100% - 90px);
+    }
+    &__appellative {
+      width: 100%;
+      margin-left: 0;
+    }
+    &__account {
+      width: calc(100% - 90px);
+    }
+  }
+  .control {
+    &-cell {
+      position: absolute;
+      top: 18px;right: 15px;
+    }
+    &__modal {
+      margin-top: 8px;
+      top: 100%;right: 0;
+    }
+  }
+  .disclose-cell {
+    margin: 0;
+    margin-right: 0;
+    position: absolute;
+    width: 20px !important;
+  }
+}

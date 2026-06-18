@@ -1,0 +1,31 @@
+// Profile info
+.profile-info {
+  .row {
+    margin-left: -12px;margin-right: -12px;
+    [class*='col-'] {
+      padding: 0 12px;
+    }
+  }
+  &__box {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    .form__item {
+      margin-bottom: 15px;
+      input {
+        font-size: $fz-14;
+      }
+      .form__pass {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .check {
+      margin-bottom: 30px;
+      &__txt {
+        font-size: 14px;
+        margin-left: 8px;
+      }
+    }
+  }
+}

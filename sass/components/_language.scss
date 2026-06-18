@@ -1,0 +1,31 @@
+// Language
+.language {
+  &__item {
+    border-radius: 50%;
+    width: 24px;height: 24px;
+    &:not(:last-child) {
+      margin-right: 17px;
+    }
+    &--uk {
+      background: url(../img/svg/i-uk.svg) center/contain no-repeat;
+    }
+    &--am {
+      background: url(../img/svg/i-am.svg) center/contain no-repeat;
+    }
+    &--cd {
+      background: url(../img/svg/i-cd.svg) center/contain no-repeat;
+    }
+    &--it {
+      background: url(../img/svg/i-it.svg) center/contain no-repeat;
+    }
+    &--fr {
+      background: url(../img/svg/i-fr.svg) center/contain no-repeat;
+    }
+    &--sp {
+      background: url(../img/svg/i-sp.svg) center/contain no-repeat;
+    }
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+}

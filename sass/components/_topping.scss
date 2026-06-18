@@ -1,0 +1,21 @@
+// Topping
+.topping {
+  z-index: 2;
+  color: $white;
+  padding-top: 48px;
+  position: relative;
+  &:after {
+    z-index: -1;
+    top: -55px;right: 7px;
+    @include pseudo-elements;
+    width: 476px;height: 427px;
+    background: url(../img/svg/topping.svg) center no-repeat;
+  }
+}
+
+// Media
+@media (max-width: $sm) {
+  .topping:after {
+    display: none;
+  }
+}

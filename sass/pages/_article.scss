@@ -1,0 +1,26 @@
+// Article
+.article {
+  .title {
+    margin-top: 16px;
+    max-width: 811px;width: 100%;
+    .timing {
+      margin-top: 16px;
+    }
+  }
+}
+
+// Media
+@media (max-width: $sm) {
+  .article {
+    .title {
+      margin-top: 0;
+      padding-top: 35px;
+      position: relative;
+      .timing {
+        margin-top: 0;
+        top: 0;left: 10px;
+        position: absolute;
+      }
+    }
+  }
+}

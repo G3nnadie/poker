@@ -1,0 +1,103 @@
+// Earnings
+.earnings {
+  .spreadsheet {
+    .cell-1 {
+      width: 24%;
+    }
+    .cell-2 {
+      width: 14%;
+    }
+    .cell-3 {
+      width: 22%;
+    }
+    .cell-4 {
+      width: 33%;
+    }
+    &__max {
+      .table {
+        &__col {
+          &--1 {
+            flex: 0 0 5%;
+            max-width: 5%;
+          }
+          &--2 {
+            flex: 0 0 18%;
+            max-width: 18%;
+          }
+          &--3 {
+            flex: 0 0 20%;
+            max-width: 20%;
+          }
+          &--4 {
+            flex: 0 0 12%;
+            max-width: 12%;
+          }
+          &--5, &--6 {
+            flex: 0 0 10%;
+            max-width: 10%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media
+@media (max-width: $xxl) {
+  .earnings {
+    .spreadsheet {
+      .cell-1 {
+        width: 28%;
+      }
+      .cell-3 {
+        width: 15%;
+      }
+      .cell-4 {
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .earnings {
+    .spreadsheet {
+      &__head {
+        display: none;
+      }
+      [class*='cell-'] {
+        display: flex;
+        align-items: center;
+      }
+      [class*='cell-']:not(:last-child,.disclose-cell,.control-cell) {
+        width: 100%;
+      }
+      [class*='cell-']:not(:last-child,.disclose-cell,.control-cell) {
+        margin-bottom: 13px;
+      }
+      &__name {
+        max-width: 100px;
+      }
+      &__room {
+        width: calc(100% - 100px);
+      }
+      .free__img {
+        display: none;
+      }
+      &__appellative {
+        margin-left: 0;
+      }
+      .cell-1 {
+        padding-right: 30px;
+      }
+    }
+    .disclose-cell {
+      margin-right: 0;
+      position: absolute;
+      top: 12px;right: 12px;
+    }
+    .table__box {
+      width: 800px;
+    }
+  }
+}

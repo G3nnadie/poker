@@ -1,0 +1,130 @@
+// Transactions
+.transactions {
+  &__head {
+    margin: 40px 0 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid $white-dark;
+  }
+  .filter, .options__group {
+    margin-top: 0;
+  }
+  .filter {
+    margin-right: 26px;
+  }
+  .spreadsheet {
+    .cell-1 {
+      width: 22%;
+    }
+    .cell-2 {
+      width: 15%;
+    }
+    .cell-3 {
+      width: 22%;
+    }
+    .cell-4 {
+      width: 15%;
+    }
+    .cell-5 {
+      width: 13%;
+    }
+    .cell-6 {
+      width: 100px;
+    }
+  }
+  &__img {
+    img {
+      display: block;
+    }
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .transactions  {
+    .spreadsheet {
+      .cell-1 {
+        width: 20%;
+      }
+      .cell-2, .cell-4 {
+        width: 12%;
+      }
+      .cell-5 {
+        width: 11%;
+      }
+      .cell-6 {
+        width: 70px;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .transactions  {
+    .spreadsheet {
+      .cell-1 {
+        width: 18%;
+      }
+      .cell-3 {
+        width: 25%;
+      }
+      .cell-4 {
+        width: 10%;
+      }
+      .cell-5 {
+        width: 10%;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .transactions  {
+    .spreadsheet {
+      &__head {
+        display: none;
+      }
+      &__item {
+        flex-wrap: wrap;
+      }
+      [class*='cell-'] {
+        display: flex;
+        align-items: center;
+        &:not(.control-cell) {
+          width: 100%;
+        }
+        &:not(.cell-6, .control-cell) {
+          margin-bottom: 15px !important;
+        }
+      }
+      .control-cell {
+        position: absolute;
+        top: 15px;right: 15px;
+      }
+      .cell-1 {
+        padding-right: 25px;
+        align-items: flex-start !important;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .transactions {
+    &__group {
+      margin-top: 20px;
+      .filter {
+        &__item {
+          margin-left: 0;
+        }
+        &__box {
+          left: 0 !important;right: auto !important;
+        }
+      }
+    }
+    .spreadsheet {
+      .cell-6 {
+        margin-bottom: 0 !important;
+      }
+    } 
+  }
+}

@@ -1,0 +1,34 @@
+// Unit
+.unit {
+  z-index: 1;
+  position: relative;
+  background: linear-gradient(263.67deg, #2392E2 7.61%, #2998FF 94.49%);
+  &__heading .heading__title {
+    color: $white;
+  }
+  &__box {
+    z-index: 1;
+    margin-top: 32px;
+    position: relative;
+    &:after {
+      z-index: -1;
+      background: $white;
+      @include pseudo-elements;
+      border-radius: 24px 24px 0px 0px;
+      top: 63px;left: 0;right: 0;bottom: 0;
+    }
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .unit__box:after {
+    border-radius: 16px 16px 0px 0px;
+  }
+}
+
+@media (max-width: $md) {
+  .unit__box {
+    margin-top: 36px;
+  }
+}

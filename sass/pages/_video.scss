@@ -1,0 +1,62 @@
+// Video
+.p-video {
+  .top-rooms {
+    .heading__title, .more a {
+      color: $white;
+    }
+    .more__icon {
+      background: url(../img/svg/i-arrow-right.svg) center no-repeat $turquoise;
+    }
+  }
+  &__last {
+    margin-top: 24px;
+    .video__box {
+      height: 290px;
+    }
+  }
+  .more_load {
+    margin-top: 20px;
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .p-video {
+    .video__item--big .video__box {
+      height: 370px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .p-video {
+    .video__item--big .video__text {
+      padding: 11px 10px 0;
+    }
+  }
+  .p-video__last {
+    margin-top: 0;
+    .video__box {
+      height: 192px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .p-video {
+    .video__box {
+      height: 275px !important;
+    }
+  }
+  .p-video__last .row .col-12:nth-child(n+4) {
+    display: none;
+  }
+}
+
+@media (max-width: $mob) {
+  .p-video {
+    .video__box {
+      height: 192px !important;
+    }
+  }
+}

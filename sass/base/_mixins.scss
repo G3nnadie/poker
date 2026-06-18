@@ -1,0 +1,40 @@
+// Mixins
+@mixin flex-center () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin pseudo-elements {
+  content: " ";
+  position: absolute;
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+    border-radius: 20px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background: $background-color;
+  }
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

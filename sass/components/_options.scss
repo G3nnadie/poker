@@ -1,0 +1,51 @@
+// Options
+.options {
+  background: $white;
+  border-radius: 4px;
+  padding: 25px 32px 30px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+  &__group {
+    margin-top: 15px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+  &__link {
+    color: $light;
+    font-size: $fz-14;
+    font-weight: $semibold;
+    display: flex;
+    align-items: center;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__icon {
+    margin-left: 10px;
+    width: 15px;height: 15px;
+    flex-shrink: 0;
+    &--export {
+      background: url(../img/svg/i-export.svg) center/contain no-repeat;
+    }
+    &--help {
+      background: url(../img/svg/i-help.svg) center/contain no-repeat;
+    }
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .options {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: $extra-mob) {
+  .options {
+    &__item:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// Dignity
+.dignity {
+  &__text {
+    padding: 0 15px;
+    line-height: 1.5;
+  }
+  .vantage {
+    padding-top: 0;
+  }
+  .unit__box {
+    z-index: 3;
+    &:after {
+      top: 30px;
+    }
+  }
+}

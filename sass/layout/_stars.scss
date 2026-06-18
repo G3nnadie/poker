@@ -1,0 +1,14 @@
+// Stars
+.stars {
+  display: flex;
+  &__item {
+    width: 16px;height: 14px;
+    background: url(../img/svg/i-star.svg) center no-repeat;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+  &__gray {
+    background: url(../img/svg/i-star-gray.svg) center no-repeat;
+  }
+}

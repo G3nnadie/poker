@@ -1,0 +1,54 @@
+// Check && Radio
+.check {
+  &__mark {
+    cursor: pointer;
+    border-radius: 2px;
+    position: relative;
+    width: 16px;height: 16px;
+    border: 2px solid $gray;
+    transition: all .2s;
+    flex-shrink: 0;
+    &:before {
+      opacity: 0;
+      @include pseudo-elements;
+      top: 0;left: 0;right: 0;bottom: 0;
+      background: url('../img/svg/i-check.svg') center no-repeat;
+      transition: inherit;
+    }
+  }
+  &_radio {
+    .check__mark {
+      background: $white-extra-dark;
+      border-radius: 50%;
+      border: 1px solid $gray-light;
+      &:before {
+        background: $blue;
+        border-radius: inherit;
+        top: 4px;left: 4px;right: 4px;bottom: 4px;
+      }
+    }
+    .check__txt {
+      margin-left: 8px;
+    }
+  }
+  &__txt {
+    color: $gray;
+    font-size: $fz-12;
+  }
+  input[type="checkbox"]:checked + span {
+    border-color: $blue;
+    background: $blue;
+  }
+  input[type="radio"]:checked + span {
+    border-color: $blue;
+  }
+  input[type="radio"]:checked + span:before,
+  input[type="checkbox"]:checked + span:before {
+    opacity: 1;
+  }
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}

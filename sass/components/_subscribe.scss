@@ -1,0 +1,58 @@
+// Subscribe
+.subscribe {
+  padding-top: 48px;
+  .title__sub {
+    max-width: 392px;
+  }
+  &__form {
+    margin: 0 auto;
+    max-width: 480px;width: 100%;
+    .form__field input {
+      padding-right: 115px;
+    }
+    .btn {
+      margin-top: 0;
+      position: absolute;
+      top: 50%;right: 4px;
+      transform: translateY(-50%);
+    }
+  }
+  .check {
+    margin: 24px auto 0;
+    max-width: 339px;width: 100%;
+  }
+  .check__txt {
+    padding-left: 3px;
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .subscribe {
+    padding-top: 32px;
+  }
+}
+
+@media (max-width: $sm) {
+  .subscribe {
+    .title {
+      margin-bottom: 36px;
+      &__sub {
+        margin-top: 16px;
+      }
+    }
+    &__form {
+      max-width: 312px;
+    }
+    .form__field input {
+      padding-right: 8px;
+    }
+    .form__btn {
+      position: static;
+      transform: translate(0);
+    }
+    .check {
+      display: none;
+    }
+  }
+}

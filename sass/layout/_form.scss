@@ -1,0 +1,244 @@
+// Form
+.form {
+  &__box, &__field {
+    position: relative;
+  }
+  &__field input {
+    color: $black;
+    display: block;
+    padding: 0 20px;
+    font-size: $fz-16;
+    line-height: 40px;
+    border-radius: 100px;
+    font-weight: $regular;
+    border: 1px solid $blue;
+    width: 100%;height: 40px;
+    font-family: $font-primary;
+    @include input-placeholder {
+      color: $gray;
+    }
+  }
+  &__name {
+    color: $blue;
+    padding: 0 4px;
+    font-size: $fz-14;
+    background: $white;
+    position: absolute;
+    font-weight: $bold;
+    top: -9px;left: 16px;
+  }
+
+  // Modal form
+  &__item {
+    padding-bottom: 5px;
+    &--disable {
+      .form__title {
+        color: $gray-light;
+      }
+      input, select {
+        color: $gray-light !important;
+      }
+      .form__input--select:after {
+        opacity: .5;
+        filter: grayscale(1);
+      }
+    }
+  }
+  &__title {
+    color: $blue;
+    padding: 0 8px;
+    line-height: 1.5;
+    font-size: $fz-14;
+    font-weight: $bold;
+    margin-bottom: 2px;
+    &--noPadding {
+      padding: 0;
+    }
+  }
+  &__input, &__input input {
+    display: block;
+  }
+  &__input {
+    position: relative;
+    padding-bottom: 18px;
+  }
+  &__input {
+    input, select {
+      color: $light;
+      font-size: $fz-16;
+      line-height: 38px;
+      border-radius: 4px;
+      padding: 0 50px 0 8px;
+      background: $white-dark;
+      width: 100%;height: 40px;
+      border: 1px solid transparent;
+      font-family: $font-primary;
+      transition: all .2s;
+      @include input-placeholder {
+        color: $gray;
+      }
+    }
+    &--border input, select {
+      border-color: $gray-extra;
+    }
+    &--padding {
+      padding-bottom: 0;
+      input, select {
+        padding-right: 8px !important;
+      }
+    }
+    &--gray {
+      input, select {
+        background: $white-extra-dark;
+      }
+    }
+    &--pass input {
+      padding-right: 55px !important;
+    }
+    &--select {
+      select {
+        padding-right: 45px !important;
+      }
+      &:after {
+        @include pseudo-elements;
+        pointer-events: none;
+        top: 50%;right: 25px;
+        width: 9px;height: 14px;
+        background: url(../img/svg/i-arrow-right-blue.svg) center/contain no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__status {
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    width: 16px;height: 16px;
+    top: calc(50% - 17px);right: 28px;
+  }
+  &__error {
+    color: $red;
+    opacity: 0;
+    visibility: hidden;
+    font-size: $fz-12;
+    font-weight: $bold;
+    position: absolute;
+    left: 8px;bottom: 0;
+    pointer-events: none;
+  }
+  &__input {
+    &--no {
+      input {
+        border-color: $red;
+      }
+      .form__status {
+        background: url(../img/svg/i-cross-white.svg) center/50% no-repeat $red;
+      }
+    }
+    &--ok {
+      input {
+        border-color: $green;
+      }
+      .form__status {
+        background: url(../img/svg/i-check-white.svg) center/74% no-repeat $green;
+      }
+    }
+    &--no, &--ok {
+      .form__status {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &--no {
+      .form__error {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__pass {
+    cursor: pointer;
+    position: absolute;
+    width: 16px;height: 12px;
+    top: calc(50% - 15px);right: 28px;
+    background: url(../img/svg/i-voice.svg) center no-repeat;
+    transition: all .2s;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__panel {
+    padding: 0 8px;
+    .check__item {
+      cursor: pointer;
+    }
+    .check__txt {
+      margin-left: 4px;
+      font-weight: $bold;
+    }
+  }
+  &__link {
+    line-height: 1;
+    a {
+      color: $gray;
+      font-size: $fz-12;
+      font-weight: $bold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__btn {
+    margin-top: 25px;
+  }
+  &__text {
+    color: $gray;
+    font-weight: $bold;
+    font-size: $fz-12;
+    margin-top: 8px;
+    a {
+      color: $blue;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Media
+@media (max-width: $sm) {
+  .form {
+   &__name {
+    display: none;
+   }
+   &__field input {
+    border: 0;
+    padding: 0 8px;
+    border-radius: 4px;
+    background: $white-dark;
+   }
+   &__btn {
+    max-width: 100%;
+    font-size: $fz-16;
+    margin-top: 16px;
+    line-height: 44px;
+   }
+
+    // Modal form
+    &__input input {
+      padding-right: 35px;
+    }
+    &__pass, &__status {
+      right: 15px;
+    }
+    &__error {
+      left: 0;
+    }
+    &__panel {
+      padding: 0;
+    }
+  }
+}

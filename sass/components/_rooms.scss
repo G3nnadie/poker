@@ -1,0 +1,147 @@
+// Rooms
+.rooms {
+  &__item {
+    overflow: hidden;
+    background: $white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  &__logo {
+    padding: 10px;
+    width: 136px;height: 96px;
+    flex-shrink: 0;
+  }
+  &__info {
+    width: 129px;
+    color: $light;
+    padding: 10px;
+    line-height: 1.5;
+    position: relative;
+    text-align: center;
+    @include flex-center;
+    flex-shrink: 0;
+    &:after {
+      top: 50%;right: 0;
+      @include pseudo-elements;
+      background: $blue-light;
+      width: 2px;height: 56px;
+      transform: translateY(-50%);
+    }
+  }
+  &__stars {
+    margin-top: 4px;
+    .stars__item {
+      background-size: contain;
+      width: 13px;height: 11px;
+      &:not(:last-child) {
+        margin-right: 2px;
+      }
+    }
+  }
+  &__text {
+    width: 100%;
+    line-height: 1.5;
+    padding: 0 15px 0 32px;
+  }
+  &__monye {
+    color: $light;
+    font-size: 20px;
+    font-weight: $bold;
+    font-family: $font-second;
+  }
+  &__img {
+    margin-right: 52px;
+    display: flex;
+    &__item {
+      overflow: hidden;
+      border-radius: 2px;
+      width: 56px;height: 56px;
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+      img {
+        display: block;
+        width: 100%;height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__action {
+    margin-right: 71px;
+    .btn {
+      min-width: 96px;
+    }
+  }
+  .more_load {
+    margin-top: 15px;
+  }
+  &__mob {
+    margin-bottom: 32px;
+  }
+}
+
+// Media
+@media (max-width: $xl) {
+  .rooms {
+    &__img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .rooms {
+    &__text {
+      padding: 0 15px;
+    }
+    &__action {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .rooms {
+    &__logo {
+      width: 96px;
+      height: 112px;
+    }
+    &__monye span {
+      display: block;
+    }
+    &__action {
+      margin-right: 24px;
+    }
+    &__details, &__info, &__action .btn, .action__link {
+      display: none;
+    }
+    .free__mob {
+      display: block;
+    }
+    &__nums {
+      color: $turquoise;
+    }
+    &__item:nth-child(n+9) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $extra-mob) {
+  .rooms {
+    &__logo {
+      width: 80px;height: 96px;
+    }
+    &__monye {
+      font-size: $fz-16;
+    }
+    &__action {
+      margin-right: 15px;
+    }
+  }
+}

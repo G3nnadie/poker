@@ -1,0 +1,32 @@
+// Timing
+.timing {
+  font-size: $fz-14;
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    + .timing__item {
+      padding-left: 20px;
+      &:before {
+        @include pseudo-elements;
+        top: 50%;left: 8px;
+        border-radius: 50%;
+        width: 4px;height: 4px;
+        background: $gray-thin;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__icon {
+    margin-right: 4px;
+    width: 17px;height: 15px; 
+    flex-shrink: 0;
+    &--clock {
+      background: url(../img/svg/i-clock.svg) center/contain no-repeat;
+    }
+    &--views {
+      background: url(../img/svg/i-views.svg) center/contain no-repeat;
+    }
+  }
+}

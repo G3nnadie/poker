@@ -1,0 +1,29 @@
+// Search
+.search {
+  position: relative;
+  max-width: 305px;width: 100%;
+  .form__input {
+    input {
+      font-size: $fz-14;
+      padding-left: 34px;
+      font-weight: $semibold;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;left: 10px;
+    width: 14px;height: 14px;
+    background: url(../img/svg/i-search-dark.svg) center/contain no-repeat;
+    transform: translateY(-50%);
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
+
+// Media
+@media (max-width: $md) {
+  .search {
+    max-width: 100%;
+  }
+}

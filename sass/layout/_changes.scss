@@ -1,0 +1,16 @@
+// Changes
+.changes {
+  z-index: 102;
+  padding: 15px;
+  display: none;
+  position: fixed;
+  background: $white;
+  left: 0;right: 0;bottom: 0;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+  .btn:not(:last-child) {
+    margin-right: 8px;
+  }
+  .btn_no {
+    color: $white;
+  }
+}

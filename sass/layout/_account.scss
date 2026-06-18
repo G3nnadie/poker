@@ -1,0 +1,66 @@
+// Account
+.account {
+  flex: 1 0 auto;
+  .container {
+    padding: 0;
+    max-width: 2000px;
+  }
+  &__box {
+    max-width: 100%;width: 100%;
+    padding: 40px 7% 80px 2.5%; 
+  }
+  &__title {
+    line-height: 1.2;
+    font-size: $fz-32;
+    font-weight: $bold;
+    margin-bottom: 24px;
+    font-family: $font-second;
+  }
+  &__subtitle {
+    line-height: 1.5;
+    font-weight: $bold;
+    padding-bottom: 8px;
+    margin-bottom: 22px;
+    font-family: $font-second;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  &__aside {
+    width: 33%;
+  }
+}
+
+// Media
+@media (max-width: $xxl) {
+  .account {
+    &__box {
+      padding: 40px 15px 80px 25px;
+    }
+    &__title {
+      font-size: $fz-26;
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .account__aside {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: $lg) {
+  .account__box {
+    padding: 30px 15px 50px;
+  }
+}
+
+@media (max-width: $md) {
+  .account {
+    &__box {
+      padding-bottom: 100px;
+    }
+    &__title {
+      font-size: $fz-24;
+    }
+  }
+}

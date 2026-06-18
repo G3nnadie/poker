@@ -1,0 +1,135 @@
+// Poker rooms
+.poker-rooms {
+  padding: 48px 0;
+  margin-top: 33px;
+  border-radius: 16px;
+  background: $blue-light;
+  &__item {
+    overflow: hidden;
+    background: $white;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  &__head {
+    height: 96px;
+    padding: 16px 24px;
+    position: relative;
+    @include flex-center;
+  }
+  &__img img {
+    display: block;
+  }
+  &__rating {
+    margin: 0 auto;
+    line-height: 1.5;
+    position: absolute;
+    background: $white;
+    border-radius: 32px;
+    width: 96px;height: 38px;
+    left: 0;right: 0;bottom: 0;
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(50%);
+    @include flex-center;
+  }
+  &__num {
+    top: 1px;
+    position: relative;
+  }
+  &__star {
+    margin-left: 5px;
+    width: 16px;height: 14px;
+    background: url(../img/svg/i-star.svg) center/contain no-repeat;
+    flex-shrink: 0;
+  }
+  &__body {
+    text-align: center;
+    padding: 27px 24px 24px;
+  }
+  &__text {
+    line-height: 1.5;
+  }
+  &__name {
+    font-size: $fz-20;
+    font-weight: $bold;
+    font-family: $font-second;
+    text-transform: uppercase;
+  }
+  &__txt {
+    margin-top: 8px;
+    overflow: hidden;
+    max-height: 48px;
+  }
+  &__action {
+    margin-top: 14px;
+    .btn {
+      max-width: 148px;
+      font-size: $fz-14;
+      line-height: 36px;
+    }
+    .action__link {
+      margin-top: 8px;
+    }
+  }
+  .more-rooms {
+    margin: 16px 0;
+  }
+  &__more {
+    margin-top: 7px;
+  }
+}
+
+// Media
+@media (max-width: $lg) {
+  .poker-rooms {
+    padding: 35px 0 23px;
+  }
+}
+
+@media (max-width: $md) {
+  .poker-rooms {
+    padding: 35px 0 23px;
+    .row .col-md-6:nth-child(n+4) {
+      display: none;
+    }
+    &__item {
+      margin-bottom: 8px;
+      box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+    }
+    &__head {
+      height: 64px;
+      padding: 10px 24px;
+      justify-content: space-between;
+    }
+    &__img {
+      max-width: 150px;width: 100%;
+    }
+    &__rating {
+      display: none;
+    }
+    &__body {
+      text-align: left;
+      display: flex;
+    }
+    &__action {
+      margin-top: 0;
+      margin-left: 12px;
+    }
+  }
+}
+
+@media (max-width: $extra-mob) {
+  .poker-rooms {
+    &__head {
+      padding: 10px;
+    }
+    &__body {
+      padding: 16px 10px 24px;
+    }
+    &__name {
+      font-size: 16px;
+    }
+    &__txt {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+// Social
+.social {
+  &_fix {
+    z-index: 101;
+    position: fixed;
+    top: 50%;right: 0;
+    background: $dark;
+    padding: 16px 10px;
+    border-radius: 8px 0px 0px 8px;
+    transform: translateY(-50%);
+  }
+  &__item {
+    display: block;
+    width: 24px;height: 24px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    &--in {
+      background: url(../img/svg/i-in.svg) center/contain no-repeat;
+    }
+    &--sk {
+      background: url(../img/svg/i-sk.svg) center/contain no-repeat;
+    }
+    &--wh {
+      background: url(../img/svg/i-wh.svg) center/contain no-repeat;
+    }
+    &--tg {
+      background: url(../img/svg/i-tg.svg) center/contain no-repeat;
+    }
+    &--ds {
+      background: url(../img/svg/i-ds.svg) center/contain no-repeat;
+    }
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+}
+
+// Media
+@media (max-width: $sm) {
+  .social_fix {
+    display: none;
+  }
+}

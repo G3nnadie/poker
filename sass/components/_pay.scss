@@ -1,0 +1,47 @@
+// Pay
+.pay {
+  background: $white;
+  padding: 12px 0 17px;
+  &__title {
+    color: $gray;
+    font-size: $fz-12;
+    font-weight: $bold;
+  }
+  &__box {
+    margin-left: 16px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 23px;
+    }
+    img {
+      display: block;
+    }
+  }
+}
+
+// Media
+@media (max-width: $sm) {
+  .pay {
+    padding: 0 0 5px;
+    .container {
+      display: block;
+      text-align: center;
+    }
+    &__title {
+      line-height: 2.1;
+    }
+    &__box {
+      margin-left: 0;
+      justify-content: center;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+      img {
+        display: initial;
+      }
+    }
+  }
+}
