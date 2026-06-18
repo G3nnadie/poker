@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Default</title>
+  <meta name="description" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="css/main.css" />
+<body>
+  <div class="wrapper fx-column">
+
+    <div class="container">
+      <ul class="modal-list" style="margin-top: 50px;">
+        <li class="modal-list__item"><a href="#" class="open-modal-login">Log in</a></li>
+        <li class="modal-list__item"><a href="#" class="open-modal-signup">Sign up</a></li>
+        <li class="modal-list__item"><a href="#" class="open-modal-pass">Password</a></li>
+        <li class="modal-list__item"><a href="#" class="open-modal-subscribe">Subscribe</a></li>
+        <li class="modal-list__item">=======================</li>
+        <li class="modal-list__item"><a href="#" class="open-modal-payment">Payment</a></li>
+        <li class="modal-list__item"><a href="#" class="open-modal-referrals">Referrals</a></li>
+        <li class="modal-list__item"><a href="#" class="open-modal-referrals-multi">Referrals multi</a></li>
+        <li class="modal-list__item"><a href="#" class="open-modal-submitted">Referrals info</a></li>
+        <li class="modal-list__item"><a href="#" class="open-modal-account">Add Poker Account</a></li>
+        <li class="modal-list__item"><a href="#" class="open-modal-withdrawal">Withdrawal</a></li>
+        <li class="modal-list__item"><a href="#" class="open-modal-sent">Withdrawal Submitted</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+
+  <div class="modal modal_login">
+    <div class="fullScreen flex-center">
+      <div class="modal__box">
+
+        <!-- Close -->
+
+        <button class="modal__close"></button>
+
+        <!-- Head -->
+
+        <div class="modal__head">
+          <div class="modal__logo"><img src="img/logo.svg" alt="Logo"></div>
+          <p class="modal__title text-center">Log In</p>
+        </div>
+
+        <!-- Body -->
+
+        <div class="modal__body">
+          <form action="#" class="form modal__form">
+            <div class="form__item">
+              <p class="form__title">Email</p>
+              <label class="form__input">
+                <span class="form__status speed"></span>
+                <input type="text" placeholder="Johndoe@email.com" />
+                <span class="form__error speed">Please enter a valid email</span>
+              </label>
+            </div>
+            <div class="form__item">
+              <p class="form__title">Password</p>
+              <label class="form__input">
+                <span class="form__status speed"></span>
+                <input type="password" />
+                <i class="form__pass"></i>
+                <span class="form__error speed">Please enter a valid email</span>
+              </label>
+            </div>
+            <div class="form__panel d-flex align-items-center justify-content-between">
+              <div class="check">
+                <label class="check__item speed d-flex align-items-start">
+                  <input type="checkbox" name="check">
+                  <span class="check__mark"></span>
+                  <span class="check__txt">Remember me</span>
+                </label>
+              </div>
+              <p class="form__link"><a href="#">Forgot Password</a></p>
+            </div>
+            <div class="form__btn text-center"><button class="btn btn_blue btn_no">Log In</button></div>
+            <p class="form__text text-center">Already have an account? <a href="#">Sign Up</a></p>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+
+  <div class="modal modal_signUp">
+    <div class="fullScreen flex-center">
+      <div class="modal__box">
+
+        <!-- Close -->
+
+        <button class="modal__close"></button>
+
+        <!-- One -->
+
+        <div class="modal__one">
+
+          <!-- Head -->
+
+          <div class="modal__head">
+            <div class="modal__logo"><img src="img/logo.svg" alt="Logo"></div>
+            <p class="modal__title text-center">Create your Account</p>
+          </div>
+
+          <!-- Body -->
+
+          <div class="modal__body">
+            <form action="#" class="form modal__form">
+              <div class="form__item">
+                <p class="form__title">Email</p>
+                <label class="form__input form__input--ok">
+                  <span class="form__status speed"></span>
+                  <input type="text" placeholder="Johndoe@email.com" />
+                  <span class="form__error speed">Please enter a valid email</span>
+                </label>
+              </div>
+              <div class="form__item">
+                <p class="form__title">Username</p>
+                <label class="form__input form__input--no">
+                  <span class="form__status speed"></span>
+                  <input type="text" placeholder="Johndoe@email.com" />
+                  <span class="form__error speed">Please enter a valid email</span>
+                </label>
+              </div>
+              <div class="form__item">
+                <p class="form__title">Password</p>
+                <label class="form__input">
+                  <span class="form__status speed"></span>
+                  <input type="password" />
+                  <span class="form__error speed">Please enter a valid email</span>
+                </label>
+              </div>
+              <div class="form__item">
+                <p class="form__title">Confirm Password </p>
+                <label class="form__input">
+                  <span class="form__status speed"></span>
+                  <input type="password" />
+                  <span class="form__error speed">Please enter a valid email</span>
+                </label>
+              </div>
+              <div class="check">
+                <label class="check__item speed d-flex align-items-start">
+                  <input type="checkbox" name="check">
+                  <span class="check__mark"></span>
+                  <span class="check__txt text-center">I am over 18 and have read and accepted the terms of use and privacy policy. By ticking this box I confirm I am happy to receive newsletters and marketing from PokerNews.</span>
+                </label>
+              </div>
+              <div class="form__btn text-center"><button class="btn btn_blue btn_no">Log In</button></div>
+              <p class="form__text text-center">Already have an account? <a href="#">Sign Up</a></p>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Two -->
+
+        <div class="modal__two">
+          
+          <!-- Head -->
+
+          <div class="modal__head">
+            <p class="modal__title text-center">Welcome to <br />Poker Deals!</p>
+          </div>
+
+          <!-- Body -->
+
+          <div class="modal__body modal__body--height flex-center">
+            <div class="modal__wrap text-center">
+              <p class="modal__txt">A confirmation email has been sent to johndoe@email.com</p>
+            </div>
+          </div>
+
+          <!-- Footer -->
+
+          <div class="modal__footer text-center">
+            <p><a href="#" class="btn btn_blue">Log In</a></p>
+            <p class="form__text text-center">Already have an account? <a href="#">Sign Up</a></p>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+
+  <div class="modal modal_pass">
+    <div class="fullScreen flex-center">
+      <div class="modal__box">
+
+        <!-- Close -->
+
+        <button class="modal__close"></button>
+
+        <!-- One -->
+
+        <div class="modal__one">
+
+          <!-- Head -->
+
+          <div class="modal__head">
+            <div class="modal__logo"><img src="img/logo.svg" alt="Logo"></div>
+            <p class="modal__title text-center">Forgot Password?</p>
+          </div>
+
+          <!-- Body -->
+
+          <div class="modal__body">
+            <form action="#" class="form modal__form">
+              <div class="form__item">
+                <p class="form__title">Email</p>
+                <label class="form__input">
+                  <span class="form__status speed"></span>
+                  <input type="text" placeholder="Johndoe@email.com" />
+                  <span class="form__error speed">Please enter a valid email</span>
+                </label>
+              </div>
+              <div class="form__item" style="display: none;">
+                <p class="form__title">Password</p>
+                <label class="form__input">
+                  <span class="form__status speed"></span>
+                  <input type="password" />
+                  <i class="form__pass"></i>
+                  <span class="form__error speed">Please enter a valid email</span>
+                </label>
+              </div>
+              <div class="form__btn text-center"><button class="btn btn_blue">Send New</button></div>
+              <p class="form__text text-center">Already have an account? <a href="#">Sign Up</a></p>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Two -->
+
+        <div class="modal__two">
+          
+          <!-- Head -->
+
+          <div class="modal__head">
+            <p class="modal__title text-center">Forgot Password?</p>
+          </div>
+
+          <!-- Body -->
+
+          <div class="modal__body modal__body--height flex-center">
+            <div class="modal__wrap text-center">
+              <p class="modal__txt">A new password has been sent to johndoe@email.com 📨</p>
+            </div>
+          </div>
+
+          <!-- Footer -->
+
+          <div class="modal__footer text-center">
+            <p><a href="#" class="btn btn_blue">Send New</a></p>
+            <p class="form__text text-center">Already have an account? <a href="#">Sign Up</a></p>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+
+  <div class="modal modal_subscribe">
+    <div class="fullScreen flex-center">
+      <div class="modal__box">
+
+        <!-- Close -->
+
+        <button class="modal__close"></button>
+
+        <!-- Head -->
+
+        <div class="heading text-center">
+          <p class="heading__title">Subscribe to Poker Deals! & go <br />to Betfair</p>
+        </div>
+
+        <!-- Body -->
+
+        <div class="modal__body">
+          <form action="#" class="form modal__form">
+            <div class="form__item">
+              <p class="form__title">Email</p>
+              <label class="form__input">
+                <span class="form__status speed"></span>
+                <input type="text" placeholder="Johndoe@email.com" />
+                <span class="form__error speed">Please enter a valid email</span>
+              </label>
+            </div>
+            <div class="form__btn text-center"><button class="btn btn_blue">Subscribe</button></div>
+            <p class="form__text text-center">Skip newsletter and go straight to Betfair</p>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======================================= -->
+
+  <div class="user-profile">
+
+    <!-- Modal -->
+
+    <div class="modal modal_payment">
+      <div class="fullScreen flex-center">
+        <div class="modal__box">
+          <button class="modal__close modal__close--dark"></button>
+          <p class="modal__title">Select Payment method</p>
+          <p class="modal__text">All transactions are secure and encrypted 🔒</p>
+          <div class="payment-nav check check_radio d-flex flex-wrap">
+            <label class="check__item payment-nav__item speed d-flex align-items-center">
+              <input type="radio" name="payment" checked />
+              <span class="check__mark"></span>
+              <span class="check__txt">Skrill</span>
+              <i class="payment-nav__icon payment-nav__icon--skrill"></i>
+            </label>
+            <label class="check__item payment-nav__item speed d-flex align-items-center">
+              <input type="radio" name="payment" />
+              <span class="check__mark"></span>
+              <span class="check__txt">Neteller</span>
+              <i class="payment-nav__icon payment-nav__icon--neteller"></i>
+            </label>
+            <label class="check__item payment-nav__item speed d-flex align-items-center">
+              <input type="radio" name="payment" />
+              <span class="check__mark"></span>
+              <span class="check__txt">Bitcoin</span>
+              <i class="payment-nav__icon payment-nav__icon--bitcoin"></i>
+            </label>
+            <label class="check__item payment-nav__item speed d-flex align-items-center">
+              <input type="radio" name="payment" />
+              <span class="check__mark"></span>
+              <span class="check__txt">Ethereum</span>
+              <i class="payment-nav__icon payment-nav__icon--ethereum"></i>
+            </label>
+            <label class="check__item payment-nav__item speed d-flex align-items-center">
+              <input type="radio" name="payment" />
+              <span class="check__mark"></span>
+              <span class="check__txt">Tether</span>
+              <i class="payment-nav__icon payment-nav__icon--tether"></i>
+            </label>
+          </div>
+          <div class="payment-tabs">
+            <div class="payment-tabs__item">
+              <div class="payment-tabs__box d-flex align-items-center justify-content-between flex-wrap">
+                <div class="form__item">
+                  <p class="form__title">Account Email</p>
+                  <label class="form__input form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+                <div class="form__item form__item--currency">
+                  <p class="form__title form__title--noPadding">Currency</p>
+                  <div class="check check_radio d-flex align-items-center">
+                    <label class="check__item speed d-flex align-items-center">
+                      <input type="radio" name="currency" checked />
+                      <span class="check__mark"></span>
+                      <span class="check__txt">USD ($)</span>
+                    </label>
+                    <label class="check__item speed d-flex align-items-center">
+                      <input type="radio" name="currency" />
+                      <span class="check__mark"></span>
+                      <span class="check__txt">EUR</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment-tabs__item">
+              <div class="payment-tabs__box d-flex align-items-center justify-content-between flex-wrap">
+                <div class="form__item">
+                  <p class="form__title">Account Email</p>
+                  <label class="form__input form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+                <div class="form__item form__item--currency">
+                  <p class="form__title form__title--noPadding">Currency</p>
+                  <div class="check check_radio d-flex align-items-center">
+                    <label class="check__item speed d-flex align-items-center">
+                      <input type="radio" name="currency" checked />
+                      <span class="check__mark"></span>
+                      <span class="check__txt">USD ($)</span>
+                    </label>
+                    <label class="check__item speed d-flex align-items-center">
+                      <input type="radio" name="currency" />
+                      <span class="check__mark"></span>
+                      <span class="check__txt">EUR</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment-tabs__item">
+              <div class="form__item">
+                <p class="form__title">BTC Address</p>
+                <label class="form__input form__input--padding form__input--border">
+                  <input type="text" placeholder="XXXX - XXXX - XXXX- XXXX" />
+                </label>
+              </div>
+            </div>
+            <div class="payment-tabs__item">
+              <div class="form__item">
+                <p class="form__title">ETH Address</p>
+                <label class="form__input form__input--padding form__input--border">
+                  <input type="text" placeholder="XXXX - XXXX - XXXX- XXXX" />
+                </label>
+              </div>
+            </div>
+            <div class="payment-tabs__item">
+              <div class="form__item">
+                <p class="form__title">USDT ERC20 Address</p>
+                <label class="form__input form__input--padding form__input--border">
+                  <input type="text" placeholder="XXXX - XXXX - XXXX- XXXX" />
+                </label>
+              </div>
+              <div class="form__item">
+                <p class="form__title">USDT ERT20 Address</p>
+                <label class="form__input form__input--padding form__input--border">
+                  <input type="text" placeholder="XXXX - XXXX - XXXX- XXXX" />
+                </label>
+              </div>
+            </div>
+          </div>
+          <p class="payment__add payment__add--modal"><a href="#" class="btn btn_disable btn_blue flex-center"><i class="i-add"></i>Add New</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal modal_users modal_referrals">
+      <div class="fullScreen flex-center">
+        <div class="modal__box">
+          <button class="modal__close modal__close--dark"></button>
+          <p class="modal__title">Submit New Room User(s)</p>
+          <form action="#" class="form referrals-form">
+            <p class="heading__title">Select the Poker Room</p>
+            <div class="row referrals-form__row">
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Room</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border form__input--select">
+                    <select>
+                      <option>Bet365</option>
+                      <option>Bet366</option>
+                      <option>Bet367</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <p class="heading__title">Now add the users</p>
+            <div class="row modal_users__border">
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Account Email</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="Johndoe@email.com" />
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Username</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Nickname</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+          <p class="add-another"><button class="add-another__btn flex-center">Add another<i class="i-plus i-plus_blue"></i></button></p>
+          <p class="btn-add btn-add_modal"><a href="#" class="btn btn_add btn_disable btn_blue flex-center">Submit</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal modal_users modal_users--multi modal_referrals--multi">
+      <div class="fullScreen flex-center">
+        <div class="modal__box">
+          <button class="modal__close modal__close--dark"></button>
+          <form action="#" class="form referrals-form">
+            <div class="row referrals-form__row">
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item form__item--disable">
+                  <p class="form__title">Room</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border form__input--select">
+                    <select>
+                      <option>Bet365</option>
+                      <option>Bet366</option>
+                      <option>Bet367</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <p class="heading__title">Now add the users</p>
+            <p class="add-another add-another_multi"><button class="add-another__btn flex-center">Multi add<i class="i-plus i-plus_blue"></i></button></p>
+            <div class="row modal_users__border">
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Account Email</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="Johndoe@email.com" />
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Username</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Nickname</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row modal_users__border">
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Account Email</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="Johndoe@email.com" />
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Username</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Nickname</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row modal_users__border">
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Account Email</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="Johndoe@email.com" />
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Username</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="form__item">
+                  <p class="form__title">Nickname</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+          <p class="add-another"><button class="add-another__btn flex-center">Add another<i class="i-plus i-plus_blue"></i></button></p>
+          <p class="btn-add btn-add_modal"><a href="#" class="btn btn_add btn_blue flex-center">Submit</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal modal_submitted">
+      <div class="fullScreen flex-center">
+        <div class="modal__box">
+          <button class="modal__close modal__close--dark"></button>
+          <p class="modal__title text-center">32 users submitted</p>
+          <p class="modal__paragraph text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Phasellus egestas tellus rutrum tellus pellentesque eu.</p>
+          <p class="btn-add btn-add_modal"><a href="#" class="btn btn_add btn_blue flex-center">Okay</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal modal_account">
+      <div class="fullScreen flex-center">
+        <div class="modal__box">
+          <button class="modal__close modal__close--dark"></button>
+          <p class="modal__title">Add Poker Account</p>
+          <p class="modal__text">Add the Poker account you wish to track </p>
+          <form action="#" class="form form_account">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form__item">
+                  <p class="form__title">Room</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border form__input--select">
+                    <select>
+                      <option>Bet365</option>
+                      <option>Bet365 1</option>
+                      <option>Bet365 2</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form__item">
+                  <p class="form__title">Account Email</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="Johndoe@email.com" />
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form__item">
+                  <p class="form__title">User ID</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form__item">
+                  <p class="form__title">Nickname</p>
+                  <label class="form__input form__input--gray form__input--padding form__input--border">
+                    <input type="text" placeholder="John Peter Doe" />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+          <p class="btn-add btn-add_modal"><a href="#" class="btn btn_disable btn_add btn_blue flex-center">Submit</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal modal_withdrawal">
+      <div class="fullScreen flex-center">
+        <div class="modal__box">
+          <button class="modal__close modal__close--dark"></button>
+          <p class="modal__title">Withdrawal</p>
+          <div class="overview__item">
+            <i class="overview__icon overview__icon--balance"></i>
+            <div class="overview__info">
+              <p class="overview__name">Balance</p>
+              <p class="overview__numbers">$4,028</p>
+            </div>
+          </div>
+          <form action="#" class="form">
+            <div class="form__item">
+              <p class="form__title">Withdraw Amount</p>
+              <label class="form__input form__input--gray form__input--padding form__input--border">
+                <input type="text" value="$400" />
+              </label>
+            </div>
+            <div class="form__item form__item--disable">
+              <p class="form__title">Payment Method</p>
+              <label class="form__input form__input--gray form__input--padding form__input--border form__input--select">
+                <select>
+                  <option>None selected</option>
+                  <option>None selected 1</option>
+                  <option>None selected 2</option>
+                </select>
+              </label>
+            </div>
+            <div class="form__item">
+              <p class="form__title">Password</p>
+              <label class="form__input form__input--gray form__input--pass form__input--padding form__input--border">
+                <input type="password" />
+                <i class="form__pass"></i>
+              </label>
+            </div>
+          </form>
+          <p class="btn-add btn-add_modal"><a href="#" class="btn btn_disable btn_add btn_blue flex-center"><i class="i-withdraw"></i>Withdraw</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal modal_sent">
+      <div class="fullScreen flex-center">
+        <div class="modal__box text-center">
+          <button class="modal__close modal__close--dark"></button>
+          <p class="modal__title">Withdrawal Submitted</p>
+          <p class="sent-sum">$324.01</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+          <p class="btn-add btn-add_modal"><a href="#" class="btn btn_add btn_blue flex-center">Okay</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="libs/jquery/jquery-3.4.0.min.js"></script>
+  <script src="libs/swiper/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
